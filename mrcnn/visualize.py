@@ -162,10 +162,9 @@ def display_instances(image, boxes, masks, class_ids, class_names,
             verts = np.fliplr(verts) - 1
             p = Polygon(verts, facecolor="none", edgecolor=color)
             ax.add_patch(p)
-    return masked_image.astype(np.uint8)
-    # ax.imshow(masked_image.astype(np.uint8))
-    # if auto_show:
-    #     plt.show()
+    ax.imshow(masked_image.astype(np.uint8))
+    if auto_show:
+        plt.show()
 
 
 def display_differences(image,
